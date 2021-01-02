@@ -5,7 +5,8 @@
 
 <h3> چطوراستفاده کنم؟ </h3>
 
-در حال حاضر یک نسخه رایگان برای استفاده وجود داره: <a href='http://t.me/dezhban_project_bot'>@dezhban_project_bot</a>
+در حال حاضر یک نسخه رایگان برای استفاده وجود داره: <a href='http://t.me/dezhban_project_bot'>@dezhban_project_bot</a><br>
+کافیه بات رو توی گروهتون اد کنید و بهش دسترسی Delete کردن بدید.
 
 <h3> چطور کار میکند؟ </h3>
 
