@@ -1,0 +1,11 @@
+kind: InternalService
+name: dezhban-bot
+spec:
+  image: dezhban:${TAG}
+  image_pull_policy: IfNotPresent
+  replicas: 1
+  resources:
+    memory: 200Mi
+  env:
+    - name: BOT_TOKEN
+      secret: bot-token
