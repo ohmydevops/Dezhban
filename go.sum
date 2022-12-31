@@ -1,4 +1,2 @@
-github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.0.0-rc1 h1:Mr8jIV7wDfLw5Fw6BPupm0aduTFdLjhI3wFuIIZKvO4=
-github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.0.0-rc1/go.mod h1:2s/IzRcxCszyNh760IjJiqoYHTnifk8ZeNYL33z8Pww=
-github.com/technoweenie/multipartstreamer v1.0.1 h1:XRztA5MXiR1TIRHxH2uNxXxaIkKQDeX7m2XsSOlQEnM=
-github.com/technoweenie/multipartstreamer v1.0.1/go.mod h1:jNVxdtShOxzAsukZwTSw6MDx5eUJoiEBsSvzDU9uzog=
+github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1 h1:wG8n/XJQ07TmjbITcGiUaOtXxdrINDz1b0J1w0SzqDc=
+github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1/go.mod h1:A2S0CWkNylc2phvKXWBBdD3K0iGnDBGbzRpISP2zBl8=
