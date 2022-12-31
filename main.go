@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/csv"
+	"errors"
 	"io"
 	"log"
 	"os"
@@ -34,6 +35,11 @@ func checkMessageForSpam(spamMessages []string, messageText string) bool {
 }
 
 func main() {
+
+	if os.Getenv("BOT_TOKEN") == "" {
+		handleErrorAndExit(errors.New("BOT_TOKEN not set."))
+	}
+
 	// Read spam db and load it in RAM
 	spamMessagesCSV, err := os.Open("spamMessages.csv")
 	handleErrorAndExit(err)
