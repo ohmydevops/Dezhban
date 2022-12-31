@@ -52,6 +52,7 @@ func main() {
 	handleErrorAndExit(err)
 
 	bot.Debug = true
+	log.Printf("Authorized on account %s", bot.Self.UserName)
 
 	updateConfig := tgbotapi.NewUpdate(0)
 	updateConfig.Timeout = 30
@@ -65,7 +66,7 @@ func main() {
 		shouldBeDeleted := checkMessageForSpam(spamMessages, update.Message.Text)
 		if shouldBeDeleted {
 			messageToDelete := tgbotapi.NewDeleteMessage(update.Message.Chat.ID, update.Message.MessageID)
-			_, err := bot.Send(messageToDelete)
+			_, err := bot.Request(messageToDelete)
 			handleError(err)
 		}
 	}
