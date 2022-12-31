@@ -1,8 +1,21 @@
-FROM golang:alpine
+FROM golang:1.19-alpine AS build
 
-WORKDIR /dezhban 
-ADD . /dezhban/
-RUN go build -o /usr/bin/dezhban main.go
-RUN chmod +x /usr/bin/dezhban
+WORKDIR /app
 
-CMD ["/usr/bin/dezhban"]
+COPY ./ ./
+
+# Install dependencies
+RUN go mod download && \
+  # Build the app
+  GOOS=linux GOARCH=amd64 go build -o main && \
+  # Make the final output executable
+  chmod +x ./main
+
+FROM alpine:latest
+
+# Install os packages
+WORKDIR /app
+
+COPY --from=build /app/ .
+
+CMD ["./main"]
